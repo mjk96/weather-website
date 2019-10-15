@@ -8,7 +8,7 @@ const forecast = (lat, lon, callback) => {
             callback('Invalid location! Re-enter coordinates.', undefined)
         } else {
             callback(undefined, 
-                body.daily.data[0].summary + ' It is currently ' + body.currently.temperature + ' degress out. There is a ' + body.currently.precipProbability + '% chance of rain.'
+                body.daily.data[0].summary + ' It is currently ' + body.currently.temperature + ' degress out. There is a ' + body.currently.precipProbability + '% chance of rain. High temperature will be ' + body.daily.data[0].temperatureHigh + 'F and a low temperature of ' + body.daily.data[0].temperatureLow + 'F. Winds will be ' + body.daily.data[0].windSpeed + ' with gusts to ' + body.daily.data[0].windGust + '.'
             )      
         }
     })
